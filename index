@@ -1,0 +1,40 @@
+<div style="font-family: Arial; padding: 20px;">
+  <h1 style="color:#b22222;">Golden Dragon Chinese Restaurant</h1>
+  <p>Authentic Chinese food at Indiana prices.</p>
+
+  <h2>Menu</h2>
+
+  <div id="menu"></div>
+
+  <div style="margin-top:25px; padding:15px; background:#f8f8f8; border-radius:8px;">
+    <h3>Ready to Order?</h3>
+    <p>Tap below to call the restaurant.</p>
+    <a href="tel:+12195551234">
+      <button style="padding:10px 18px;">Call (219) 555‑1234</button>
+    </a>
+  </div>
+</div>
+
+<script>
+  const menu = [
+    { name: "General Tso's Chicken", price: 12.99 },
+    { name: "Orange Chicken", price: 11.99 },
+    { name: "Beef Lo Mein", price: 10.99 },
+    { name: "Chicken Fried Rice", price: 9.99 },
+    { name: "Sweet & Sour Chicken", price: 11.49 },
+    { name: "Crab Rangoon (6 pcs)", price: 5.99 },
+    { name: "Egg Rolls (2 pcs)", price: 3.99 },
+    { name: "Sesame Chicken", price: 12.49 },
+    { name: "Kung Pao Chicken", price: 11.49 },
+    { name: "Shrimp Fried Rice", price: 10.99 }
+  ];
+
+  const menuDiv = document.getElementById("menu");
+
+  menu.forEach(item => {
+    const div = document.createElement("div");
+    div.style.marginBottom = "12px";
+    div.innerHTML = `<strong>${item.name}</strong> - $${item.price.toFixed(2)}`;
+    menuDiv.appendChild(div);
+  });
+</script>
